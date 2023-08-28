@@ -58,6 +58,19 @@ form {
   background-color: red;
 }
 
+.text-field-input::before{
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background: #000;
+  opacity: 0;
+}
+.text-field-input:invalid::before{
+  opacity: 1;
+}
 .text-field-label {
   position: absolute;
   top: 50%;
@@ -69,6 +82,7 @@ form {
   transition: top 100ms ease-in, font-size 100ms ease-in;
 }
 .text-field-input {
+  position: relative;
   width: 100%;
   border: none;
   outline: none;
