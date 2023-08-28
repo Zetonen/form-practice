@@ -53,6 +53,11 @@ form {
   border: 1px solid #000000;
   border-radius: 8px;
 }
+
+.text-field:invalid>.text-field-input{
+  background-color: red;
+}
+
 .text-field-label {
   position: absolute;
   top: 50%;
@@ -68,6 +73,12 @@ form {
   border: none;
   outline: none;
 }
+
+.text-field-input:invalid{
+  background-color: red;
+
+}
+
 .text-field-input:not(:placeholder-shown) + .text-field-label {
   top: 0;
   font-size: 10px;
