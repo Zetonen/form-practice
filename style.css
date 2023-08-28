@@ -1,0 +1,272 @@
+html {
+  box-sizing: border-box;
+}
+
+html * {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+/* body.lock{
+  overflow: hidden;
+} */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.is-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+form {
+  padding: 20px;
+}
+
+.text-field {
+  position: relative;
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 8px;
+}
+.text-field-label {
+  position: absolute;
+  top: 50%;
+  left: 13px;
+  padding: 0 5px;
+  font-size: 16px;
+  background-color: #ffffff;
+  transform: translateY(-50%);
+  transition: top 100ms ease-in, font-size 100ms ease-in;
+}
+.text-field-input {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+.text-field-input:not(:placeholder-shown) + .text-field-label {
+  top: 0;
+  font-size: 10px;
+}
+.box {
+  margin-left: 50px;
+  width: 500px;
+  border: 1px solid #000000;
+}
+.policy {
+  position: relative;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.input-policy {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+.input-policy + span {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #000000;
+  border-radius: 4px;
+}
+
+.input-policy:checked + span {
+  border: 1px solid #0075fe;
+
+  background-color: #0075fe;
+}
+.input-policy:checked ~ .input-policy-icon {
+  opacity: 1;
+}
+
+.input-policy-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  width: 10px;
+  height: 10px;
+  transform: translateY(-50%);
+  opacity: 0;
+  fill: #ffffff;
+}
+
+.input-level:checked {
+  outline: 1px solid #0066ff;
+  outline-offset: 2px;
+}
+.input-age {
+  outline: none;
+}
+.input-age:in-range {
+  border: 1px solid #0dff00;
+}
+.input-age:out-of-range {
+  border: 1px solid #ff0000;
+}
+
+.input-name {
+  width: 100%;
+}
+
+.input-name:invalid {
+  border: 1px solid #ff0000;
+}
+.input-name:valid {
+  border: 1px solid #0dff00;
+}
+.modal-open {
+  margin: 50px 0 20px 100px;
+  padding: 15px 30px;
+  background-color: #8cfbfb;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  /* transition: background-color 300ms ease-in; */
+}
+
+.modal-open:disabled {
+  background-color: rgb(239, 239, 239);
+}
+.back-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 460px;
+  height: 500px;
+  padding: 82px 92px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  transform: translate(-50%, -50%);
+}
+
+.modal-close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 30px;
+  height: 30px;
+  color: #000000;
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.modal-selection {
+  margin-bottom: 40px;
+}
+
+.modal-label {
+  position: relative;
+  display: block;
+  margin-top: 9px;
+}
+
+.modal-input-icon {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: #403a4b;
+  fill-opacity: 0.6;
+  transition: fill 300ms ease-in;
+}
+
+.modal-input-icon.email {
+  right: 17px;
+  width: 8px;
+  height: 11px;
+}
+
+.modal-input-icon.password {
+  right: 15px;
+  width: 12px;
+  height: 8px;
+}
+
+.modal-label > span {
+  position: absolute;
+  top: 3px;
+  left: 16px;
+  font-family: "Lora", serif;
+  font-size: 10px;
+  color: rgba(64, 58, 75, 0.6);
+  transition: color 300ms ease-in;
+}
+.modal-input {
+  width: 100%;
+  height: 40px;
+  padding-top: 20px;
+  padding-left: 16px;
+  /* margin-top: 9px; */
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 12px;
+  color: #403a4b;
+
+  border: 1px solid transparent;
+  border-radius: 7px;
+  background-color: #f8f1ff;
+  transition: border 300ms ease-in;
+  outline: none;
+}
+
+.modal-input:not(:placeholder-shown) + .modal-input-icon {
+  display: none;
+}
+
+.modal-label:focus-within > .modal-input,
+.modal-label:hover > .modal-input {
+  border: 1px solid aqua;
+}
+.modal-label:focus-within > span,
+.modal-label:hover > span {
+  color: aqua;
+}
+.modal-label:focus-within > .modal-input-icon,
+.modal-label:hover > .modal-input-icon {
+  fill: aqua;
+}
+/* 
+.modal-input:focus,
+.modal-input:hover {
+} */
+
+.modal-input:last-child {
+  margin-bottom: 0;
+}
