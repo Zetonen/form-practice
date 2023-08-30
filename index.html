@@ -19,8 +19,27 @@
   <body lock>
     <button class="modal-open" type="button" data-modal-open>Open</button>
     <form class="box">
+      <div class="box-city">
+        <input
+          class="box-city-input"
+          name="city"
+          type="text"
+          placeholder="City"
+          minlength="2"
+          required
+        />
+      </div>
+
       <div class="text-field">
-        <input id="name" class="text-field-input" type="text" placeholder=" " autocomplete="off" required minlength="2"/>
+        <input
+          id="name"
+          class="text-field-input"
+          type="text"
+          placeholder=" "
+          autocomplete="off"
+          required
+          minlength="2"
+        />
         <label for="name" class="text-field-label">First name</label>
       </div>
       <button type="submit">Send</button>
