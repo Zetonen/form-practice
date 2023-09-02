@@ -28,10 +28,12 @@
           minlength="2"
           required
         />
+        <label class="box-city-input-image" for="city"></label>
+      
       </div>
 
       <div class="text-field">
-        <input
+        <input 
           id="name"
           class="text-field-input"
           type="text"
@@ -41,10 +43,16 @@
           minlength="2"
         />
         <label for="name" class="text-field-label">First name</label>
+        <svg class="text-field-image">
+          <use href="./image/wow.svg#wow"></use>
+        </svg>
+        <svg class="text-field-error">
+          <use href="./image/error.svg#error"></use>
+        </svg>
       </div>
-      <button type="submit">Send</button>
+      <!--<button type="submit">Send</button>
     </form>
-    <!-- <div class="back-modal is-hidden" data-modal>
+     <div class="back-modal is-hidden" data-modal>
       <div class="modal">
         <button class="modal-close" type="button" data-modal-close>X</button>
         <div class="modal-selection">

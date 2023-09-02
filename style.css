@@ -47,16 +47,130 @@ form {
   padding: 20px;
 }
 
-.text-field {
+.box-city-input-image{
   position: relative;
+}
+.box-city-input:invalid{
+  border-color: #ff0000;
+  outline: #ff0000;
+}
+
+.box-city-input:invalid +.box-city-input-image::before{
+content: " ";
+position: absolute;
+width: 20px;
+height: 20px;
+top: 50%;
+left: -30px;
+background-image: url("./image/error.svg#error");
+transform: translateY(-50%);
+}
+
+
+
+
+
+/* .text-field-input:valid::before */
+
+.box-city-input:valid +.box-city-input-image::after{
+  content: " ";
+  position: absolute;
+width: 25px;
+height: 25px;
+top: 50%;
+left: -30px;
+background-image: url("./image/wow.svg#wow");
+transform: translateY(-50%);
+background-repeat: no-repeat;
+}
+
+
+
+.text-field-input{
   padding: 10px;
   border: 1px solid #000000;
   border-radius: 8px;
+  
 }
 
-.text-field:invalid>.text-field-input{
+.text-field-input:invalid{
   background-color: red;
+  outline: none;
 }
+.text-field-input-image{
+  position: relative;
+}
+
+.box-field-input:invalid{
+  border-color: #ff0000;
+  outline: #ff0000;
+}
+
+
+.box-field-input:invalid +.box-field-input-image::before{
+  content: " ";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: -30px;
+  background-image: url("./image/error.svg#error");
+  transform: translateY(-50%);
+  }
+  
+  .box-field-input:valid +.box-field-input-image::after{
+    content: " ";
+    position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: -30px;
+  background-image: url("./image/wow.svg#wow");
+  transform: translateY(-50%);
+
+  }
+  
+
+.text-field {
+  position: relative;
+  
+}
+
+
+.text-field-image{
+  position: absolute;
+width: 25px;
+height: 25px;
+top: 50%;
+right: 10px;
+transform: translateY(-50%);
+fill: green;
+}
+
+.text-field-input:invalid~.text-field-image{
+  display: none;
+}
+
+.text-field-error{
+  position: absolute;
+width: 25px;
+height: 25px;
+top: 50%;
+right: 10px;
+transform: translateY(-50%);
+display: none;
+}
+
+
+
+.text-field-input:invalid~.text-field-error{
+  display: block;
+}
+
+
+/*.text-field:invalid>.text-field-input{
+  background-color: red;
+}*/
 
 .text-field-input::before{
   position: absolute;
@@ -84,12 +198,11 @@ form {
 .text-field-input {
   position: relative;
   width: 100%;
-  border: none;
   outline: none;
 }
 
 .text-field-input:invalid{
-  background-color: red;
+  /* background-color: red; */
 
 }
 
@@ -330,8 +443,5 @@ form {
   top: 15px;
   right: 15px;
   background-image: url(./image/Tick_Mark_Dark_icon-icons.com_69147.svg);
-
-  
-  
-
 }
+
