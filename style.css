@@ -55,6 +55,11 @@ form {
   outline: #ff0000;
 }
 
+.box-city-input:valid{
+  border-color:green;
+  outline:green;
+}
+
 .box-city-input:invalid +.box-city-input-image::before{
 content: " ";
 position: absolute;
@@ -84,17 +89,28 @@ transform: translateY(-50%);
 background-repeat: no-repeat;
 }
 
+.box-text{
+  margin: 10px 0 15px 10px;
+ font-size: 13px;
+ color: rgb(79, 76, 76);
 
+}
 
 .text-field-input{
   padding: 10px;
-  border: 1px solid #000000;
+  border: 3px solid #000000;
   border-radius: 8px;
   
 }
+.text-field-input:valid{
+  border-color: green;
+  outline: none;
+}
+
+
 
 .text-field-input:invalid{
-  background-color: red;
+  border-color: red;
   outline: none;
 }
 .text-field-input-image{
@@ -118,6 +134,9 @@ background-repeat: no-repeat;
   transform: translateY(-50%);
   }
   
+  .box-field-input:valid{
+    border-color: green;
+  }
   .box-field-input:valid +.box-field-input-image::after{
     content: " ";
     position: absolute;
@@ -190,7 +209,7 @@ display: none;
   top: 50%;
   left: 13px;
   padding: 0 5px;
-  font-size: 16px;
+  font-size: 15px;
   background-color: #ffffff;
   transform: translateY(-50%);
   transition: top 100ms ease-in, font-size 100ms ease-in;
@@ -215,6 +234,20 @@ display: none;
   width: 500px;
   border: 1px solid #000000;
 }
+
+.box-btn{
+border-radius: 5px;
+border: 3px solid  aqua;
+color: aqua;
+background-color: transparent;
+cursor: pointer;
+}
+.box-btn:hover{
+color: #ffffff;
+background-color: aqua;
+}
+
+
 .policy {
   position: relative;
   padding-left: 10px;
@@ -411,7 +444,7 @@ display: none;
 
 .box-city{
   position: relative;
-  margin-bottom: 20px;
+
   
 }
 
@@ -419,7 +452,7 @@ display: none;
   position: relative;
   padding: 10px;
   width: 100%;
-  border: 1px solid #000000;
+  border: 3px solid #000000;
   border-radius: 8px;
 }
 
